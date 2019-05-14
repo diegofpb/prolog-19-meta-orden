@@ -15,14 +15,14 @@ es igual o mayor que otro. Por ejemplo, ```menor(3,4,<,M)``` devuelve ```M=3```.
 3. Programar un predicado ```ordenar(Lista,Comp,Orden)``` tal que la lista ```Orden``` es la resultante de ordenar la lista ```Lista``` utilizando ```Comp``` como criterio de comparacion. Para llevar a cabo la ordenacion usaremos arboles flotantes. El arbol inicial contiene como hojas los elementos de la lista de entrada. En un arbol flotante cada nodo interno tiene dos hijos exactamente y su valor es el menor de los de sus hijos. El proceso de tomar el valor de la raız del arbol flotante, reflotarlo y continuar hasta que el arbol este vacıo obtiene la lista ordenada deseada.
 
     Se pide seguir los siguientes pasos:
-    - Programar un predicado lista hojas(Lista,Hojas) que, dada una lista, devuelve otra con las hojas que compondran el arbol: 
+    - Programar un predicado lista_hojas(Lista,Hojas) que, dada una lista, devuelve otra con las hojas que compondran el arbol: 
     
     ```
     lista_hojas([1,2,3],Hojas) 
     Hojas = [tree(1,void,void),tree(2,void,void),tree(3,void,void)]
     ```
 
-    - Programar un predicado hojas arbol(Hoja, Com, Arbol) que, dada la lista de hojas devuelve el arbol flotante inicial:
+    - Programar un predicado hojas_arbol(Hoja, Com, Arbol) que, dada la lista de hojas devuelve el arbol flotante inicial:
 
     ```
     tree(1,tree(1,tree(1,void,void),tree(2,void,void)),tree(3,void,void))
@@ -35,4 +35,4 @@ en ```Orden``` la lista ordenada.
 
         En el arbol flotante todos los nodos del camino que lleva de la raız a la hoja que tiene su mismo valor tienen ese mismo valor, ya que es el menor de todos. Para reflotar el arbol se debe recorrer dicho camino desde la hoja hasta la raız procediendo como sigue. El nodo hoja se elimina (sustituyendolo por un arbol vacıo). Cada nodo que tenga un solo hijo se sustituye por dicho unico hijo (un nodo tal sera el padre de la hoja que se ha eliminado). A cada nodo con dos hijos se le asigna como valor el menor de los de sus hijos.
 
-    - Programar ```ordenar(Lista,Comp,Orden)``` con estos elementos. El segundo argumento de ordenar/3 debe permitir ordenar segun cualquier criterio deseado, siempre que exista un predicado que se pueda utilizar para definir dicho criterio. Por ejemplo, para la ordenacion tradicional de listas de numeros se utilizarıa la llamada ```ordenar([...],’=<’,Orden)```. O, definiendo un predicado ```menor_o_igual/2``` como el de arriba que determina un criterio no estandar de comparacion de terminos se podrıan ordenar listas segun dicho criterio con llamadas como ```ordenar([...],menor_- o_igual,Orden)```.
+    - Programar ```ordenar(Lista,Comp,Orden)``` con estos elementos. El segundo argumento de ```ordenar/3``` debe permitir ordenar segun cualquier criterio deseado, siempre que exista un predicado que se pueda utilizar para definir dicho criterio. Por ejemplo, para la ordenacion tradicional de listas de numeros se utilizarıa la llamada ```ordenar([...],’=<’,Orden)```. O, definiendo un predicado ```menor_o_igual/2``` como el de arriba que determina un criterio no estandar de comparacion de terminos se podrıan ordenar listas segun dicho criterio con llamadas como ```ordenar([...],menor_- o_igual,Orden)```.
