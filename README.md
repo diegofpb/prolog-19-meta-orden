@@ -29,7 +29,7 @@ es igual o mayor que otro. Por ejemplo, ```menor(3,4,<,M)``` devuelve ```M=3```.
     ```
 
     - Programar un predicado ```ordenacion(Arbol,Comp,Orden)``` que, dado el arbol inicial, devuelve
-en Orden la lista ordenada.
+en ```Orden``` la lista ordenada.
 
         El valor de la raız de este arbol es el menor de los elementos de la lista, por lo que este elemento se situa en primer lugar de la lista ordenada de salida. A continuacion se “reflota”el arbol y su nueva raız sera el siguiente elemento de la lista ordenada. Y ası sucesivamente.
 
