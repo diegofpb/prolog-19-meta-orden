@@ -1,12 +1,8 @@
 # prolog-19-meta-orden
 
-Se pide escribir un programa para ordenar listas en el que el criterio de comparacion no este predefinido 
-(se da en la ejecucion) y que ademas lleve a cabo la ordenacion mediante el algoritmo de “arboles flotantes”
-que se explica mas abajo. La practica consta de las siguientes partes:
+Se pide escribir un programa para ordenar listas en el que el criterio de comparacion no este predefinido (se da en la ejecucion) y que ademas lleve a cabo la ordenacion mediante el algoritmo de “arboles flotantes” que se explica mas abajo. La practica consta de las siguientes partes:
 
-1. Programar un predicado ```menor(A,B,Comp,M)```, que devuelva en M el menor entre A y B usando Comp
-como criterio de comparacion. Comp es el nombre de un predicado que determina cuando un elemento
-es igual o mayor que otro. Por ejemplo, ```menor(3,4,<,M)``` devuelve ```M=3```.
+1. Programar un predicado ```menor(A,B,Comp,M)```, que devuelva en ```M``` el menor entre ```A``` y ```B``` usando ```Comp``` como criterio de comparacion. Comp es el nombre de un predicado que determina cuando un elemento es igual o mayor que otro. Por ejemplo, ```menor(3,4,<,M)``` devuelve ```M=3```.
 
 2. Programar un predicado ```menor_o_igual/2``` que determina si su primer argumento es menor o igual al segundo de la siguiente forma. Una variable libre es igual a cualquier otro termino. Un termino es menor que otro, no siendo ninguno variable libre, si su nombre es ```@<``` que el del otro, si los nombres son identicos pero su aridad es ```<``` que la del otro, o nombres y aridades son identicas pero alguno de los argumentos del primer termino es menor que el correspondiente argumento del segundo termino segun el siguiente procedimiento:
 
