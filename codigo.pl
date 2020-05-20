@@ -1,7 +1,4 @@
 % Autores de la practica.
-alumno_prode('Fernandez','Peces Barba','Diego','T110271').
-alumno_prode('Garcia', 'Garcia', 'Ruben', 'W140186').
-alumno_prode('Maldonado','Quispe','Idania','Q080182').
 
 % menor/4
 menor(A,B,Comp,M):-
